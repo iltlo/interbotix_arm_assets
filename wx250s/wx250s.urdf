@@ -6,13 +6,14 @@
 <!-- <robot name="wx250s"> -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="wx250s">
   <xacro:property name="mesh_dir" value="/home/ian/Desktop/arm_assets/wx250s/meshes" />
-  <!-- <mujoco>
-    <compilter
-    meshdir="package://meshes"
-    balanceinertia="1"
-    discardvisual="0"
+  <mujoco>
+    <compiler
+    meshdir="meshes/"
+    balanceinertia="true"
+    discardvisual="false"
     />
-  </mujoco> -->
+  </mujoco>
+
   <material name="interbotix_black">
     <texture filename="file://${mesh_dir}/interbotix_black.png"/>
   </material>
