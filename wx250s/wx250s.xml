@@ -44,7 +44,7 @@
   </asset>
 
   <worldbody>
-    <body name="wx250s/base_link" pos="0 0 0.072">
+    <body name="wx250s/base_link" pos="0 0 0">
       <inertial pos="-0.0380446000 0.0006138920 0.0193354000" quat="0.707107 0 0 0.707107" mass="0.538736" diaginertia="0.0021150000 0.0006921000 0.0025240000"/>
       <geom pos="0 0 -0.003" quat="0.707107 0 0 0.707107" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="base"/>
       <geom pos="0 0 -0.003" quat="0.707107 0 0 0.707107" type="mesh" mesh="base"/>
@@ -88,13 +88,13 @@
                   <geom pos="-0.0685 0 0" quat="0.707107 0 0 0.707107" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="gripper_prop"/>
                   <geom pos="-0.0685 0 0" quat="0.707107 0 0 0.707107" type="mesh" mesh="gripper_prop"/>
                 </body>
-                <body name="wx250s/left_finger_link" pos="0.066 0 0">
+                <body name="wx250s/left_finger_link" pos="0.066 0.007 0">
                   <inertial pos="0.013816 0 0" quat="0.705384 0.705384 -0.0493271 -0.0493271" mass="0.016246" diaginertia="4.79509e-06 3.7467e-06 1.48651e-06"/>
                   <joint name="left_finger" pos="0 0 0" axis="0 1 0" type="slide" range="0.007 0.037" actuatorfrcrange="-5 5" damping="0.1" frictionloss="0.1"/>
                   <geom pos="0 0.005 0" quat="0 0 0 -1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="gripper_finger"/>
                   <geom pos="0 0.005 0" quat="0 0 0 -1" type="mesh" mesh="gripper_finger"/>
                 </body>
-                <body name="wx250s/right_finger_link" pos="0.066 0 0">
+                <body name="wx250s/right_finger_link" pos="0.066 -0.007 0">
                   <inertial pos="0.013816 0 0" quat="0.705384 0.705384 0.0493271 0.0493271" mass="0.016246" diaginertia="4.79509e-06 3.7467e-06 1.48651e-06"/>
                   <joint name="right_finger" pos="0 0 0" axis="0 1 0" type="slide" range="-0.037 -0.007" actuatorfrcrange="-5 5" damping="0.1" frictionloss="0.1"/>
                   <geom pos="0 -0.005 0" quat="0 0 1 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="gripper_finger"/>
@@ -117,10 +117,12 @@
     <position class="position_limited" name="wrist_angle" joint="wrist_angle"/>
     <position class="position_limited" name="wrist_rotate" joint="wrist_rotate"/>
     <position class="position_small" name="gripper" joint="gripper"/>
+    <position class="position_small" name="left_finger" joint="left_finger"/>
+    <position class="position_small" name="right_finger" joint="right_finger"/>
   </actuator>
 
   <keyframe>
-    <key name="home" qpos="0 0 0 0 0 0 0 0 0" ctrl="0 0 0 0 0 0 0"/>
+    <key name="home" qpos="0 0 0 0 0 0 0 0.01 -0.05" ctrl="0 0 0 0 0 0 0 0 0"/>
   </keyframe>
 
 </mujoco>

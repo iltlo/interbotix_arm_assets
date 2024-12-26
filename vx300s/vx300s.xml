@@ -45,7 +45,7 @@
   </asset>
 
   <worldbody>
-    <body name="vx300s/base_link" pos="0 0 0.079">
+    <body name="vx300s/base_link" pos="0 0 0">
       <inertial pos="0.000259233 -3.3552e-06 0.0116129" quat="0.0330273 0.706309 0.033027 0.706361" mass="0.798614" diaginertia="0.00120156 0.00113744 0.0009388"/>
       <geom pos="0 0 -0.003" quat="0.707107 0 0 0.707107" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="base"/>
       <geom pos="0 0 -0.003" quat="0.707107 0 0 0.707107" type="mesh" mesh="base"/>
@@ -89,13 +89,13 @@
                   <geom pos="-0.0685 0 0" quat="0.707107 0 0 0.707107" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="gripper_prop"/>
                   <geom pos="-0.0685 0 0" quat="0.707107 0 0 0.707107" type="mesh" mesh="gripper_prop"/>
                 </body>
-                <body name="vx300s/left_finger_link" pos="0.0687 0 0">
+                <body name="vx300s/left_finger_link" pos="0.0687 0.021 0">
                   <inertial pos="0.017344 -0.0060692 0" quat="0.7038 0.7038 -0.0683038 -0.0683038" mass="0.034796" diaginertia="2.48003e-05 1.417e-05 1.20797e-05"/>
                   <joint name="left_finger" pos="0 0 0" axis="0 1 0" type="slide" range="0.021 0.057" actuatorfrcrange="-5 5" damping="0.1" frictionloss="0.1"/>
                   <geom pos="-0.0404 -0.0575 0" quat="-0.5 0.5 -0.5 0.5" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="gripper_finger"/>
                   <geom pos="-0.0404 -0.0575 0" quat="-0.5 0.5 -0.5 0.5" type="mesh" mesh="gripper_finger"/>
                 </body>
-                <body name="vx300s/right_finger_link" pos="0.0687 0 0">
+                <body name="vx300s/right_finger_link" pos="0.0687 -0.021 0">
                   <inertial pos="0.017344 0.0060692 0" quat="0.703801 0.703801 0.0682961 0.0682961" mass="0.034796" diaginertia="2.48002e-05 1.417e-05 1.20798e-05"/>
                   <joint name="right_finger" pos="0 0 0" axis="0 1 0" type="slide" range="-0.057 -0.021" actuatorfrcrange="-5 5" damping="0.1" frictionloss="0.1"/>
                   <geom pos="-0.0404 0.0575 0" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="gripper_finger"/>
